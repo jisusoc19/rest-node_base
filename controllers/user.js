@@ -69,12 +69,17 @@ const usuariosdelete = async(req, res=response)=> {
 
     //Mejorar desactivarlo para tener consistencia
 
-    const usuario = await Usuario.findByIdAndDelete(id,{estado: false})
+    const usuario = await Usuario.findByIdAndUpdate(id,{estado: false});
+    
     res.json({
         msg: 'usuario eliminado',
         usuario
     })
 }
+
+
+
+
 const usuariospatch = (req, res=response)=> {
     res.json({
         msg: 'patch api - controlador'
