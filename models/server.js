@@ -37,7 +37,7 @@ class Server {
     listen(){
         
         this.app.listen(this.port,()=>{
-            console.log(process.env.SECRETORPRIVATEKEY)
+            
             console.log(`Server is running on port `, this.port);
         })
     }
